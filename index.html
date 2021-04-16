@@ -6,32 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./style.css" />
-    <script src="./app.js"></script>
   </head>
   <body>
     <header>
       <h1 class="main-title">Unqwertier</h1>
     </header>
 
-    <div class="password">
-      <input type="text" />
-    </div>
+    <div class="main-content">
+      <div class="password">
+        <input class="show-password" type="text" />
+        <form><button class="button">Go!</button></form>
+      </div>
 
-    <div class="properties">
-      <label><input class="prop-number" type="number" />length</label>
-      <label> <input class="prop-check" type="checkbox" />numbers</label>
-      <label> <input class="prop-check" type="checkbox" />symbols</label>
-      <label> <input class="prop-check" type="checkbox" />letters</label>
-      <label> <input class="prop-check" type="checkbox" />capitals</label>
+      <div class="properties">
+        <label> <input class="prop-number" type="number" /><br>length</label>
+        <label> <input class="prop-check" type="checkbox" /><br>numbers</label>
+        <label> <input class="prop-check" type="checkbox" /><br>letters</label>
+        <label> <input class="prop-check" type="checkbox" /><br>capitals</label>
+        <label> <input class="prop-check" type="checkbox" /><br>symbols</label>
+      </div>
     </div>
 
     <footer>
       <h5 class="footer-text">
         <a class="footer-link" href="https://github.com/kvrdv/unqwertier"> Unqwertier</a>
         - simple password generator by
-        <a class="footer-link" href="https://github.com/kvrdv">Semyon Kovardaev.</a>
+        <a class="footer-link" href="https://github.com/kvrdv">Semyon Kovardaev</a>
         2021
       </h5>
     </footer>
+    <script src="./app.js"></script>
   </body>
 </html>
