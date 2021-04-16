@@ -9,29 +9,58 @@
   </head>
   <body>
     <header>
-      <h1 class="main-title">Unqwertier</h1>
+      <h1 class="main-title"><a href="https://github.com/kvrdv/unqwertier"> Unqwertier</a></h1>
+      <h4 class="main-title-text">
+        Simple password generator by <a class="main-title-link" href="https://github.com/kvrdv">KVRDV</a>
+      </h4>
     </header>
 
     <div class="main-content">
       <div class="password">
         <input class="show-password" type="text" />
-        <form><button class="button">Go!</button></form>
+        <form>
+          <button class="button">
+            <img class="button-image" src="./src/images/lock.svg" />
+          </button>
+        </form>
       </div>
 
       <div class="properties">
-        <label> <input class="prop-number" type="number" /><br>length</label>
-        <label> <input class="prop-check" type="checkbox" /><br>numbers</label>
-        <label> <input class="prop-check" type="checkbox" /><br>letters</label>
-        <label> <input class="prop-check" type="checkbox" /><br>capitals</label>
-        <label> <input class="prop-check" type="checkbox" /><br>symbols</label>
+        <div class="property-length">
+          <input class="prop-length" id="prp1" type="text" min="4" max="15" maxlength="2" />
+          <label for="prp1"></label>
+          <p class="property-name-length">length</p>
+        </div>
+
+        <div class="property">
+          <input class="prop-check" type="checkbox" id="prp2" />
+          <label for="prp2"></label>
+          <p class="property-name">numbers</p>
+        </div>
+
+        <div class="property">
+          <input class="prop-check" type="checkbox" id="prp3" />
+          <label for="prp3"></label>
+          <p class="property-name">letters</p>
+        </div>
+
+        <div class="property">
+          <input class="prop-check" type="checkbox" id="prp4" />
+          <label for="prp4"></label>
+          <p class="property-name">capitals</p>
+        </div>
+
+        <div class="property">
+          <input class="prop-check" type="checkbox" id="prp5" />
+          <label for="prp5"></label>
+          <p class="property-name">symbols</p>
+        </div>
       </div>
     </div>
 
-    <footer>
+    <footer class="footer">
       <h5 class="footer-text">
-        <a class="footer-link" href="https://github.com/kvrdv/unqwertier"> Unqwertier</a>
-        - simple password generator by
-        <a class="footer-link" href="https://github.com/kvrdv">Semyon Kovardaev</a>
+        <a class="footer-link" href="https://github.com/kvrdv">KVRDV</a>
         2021
       </h5>
     </footer>

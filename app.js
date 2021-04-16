@@ -1,4 +1,4 @@
-// Массивы символов из которых состоит пароль:
+// Массивы символов из которых составляется пароль:
 const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 const letters = [
   'a',
@@ -62,45 +62,53 @@ const emptyArr = [];
 // Переменные содержащие информацию о параметрах пароля:
 const passwordProps = [numbers, letters, capitals, symbols, 12];
 const propCheck = document.querySelectorAll('.prop-check');
-passwordProps[4] = document.querySelector('.prop-number').value;
 
-
-// Переменные для проверки сгенерированного пароля:
+// Переменные для проверки сгенерированного пароля на содержание необходимых типов символов:
 let findNumbers = true;
 let findLetters = true;
 let findCapitals = true;
 let findSymbols = true;
 
-// Окно отображения готового пароля:
+// Вывод пароля:
 let showPassword = document.querySelector('.show-password');
+
+// Кнопка генерации пароля:
 const button = document.querySelector('.button');
 
-// Получение информации по параметрам пароля:
-if (propCheck[0].checked === true) {
-  passwordProps[0] = numbers;
-} else {
-  passwordProps[0] = emptyArr;
+// Функция генерации массива с параметрами пароля:
+function getProperties(propCheck, passwordProps) {
+  // Получаем длину пароля:
+  passwordProps[4] = document.querySelector('.prop-length').value;
+
+  // Получаем параметры в соответствии с выставленными чекбоксами:
+  if (propCheck[0].checked === true) {
+    passwordProps[0] = numbers;
+  } else {
+    passwordProps[0] = emptyArr;
+  }
+
+  if (propCheck[1].checked === true) {
+    passwordProps[1] = letters;
+  } else {
+    passwordProps[1] = emptyArr;
+  }
+
+  if (propCheck[2].checked === true) {
+    passwordProps[2] = capitals;
+  } else {
+    passwordProps[2] = emptyArr;
+  }
+
+  if (propCheck[3].checked === true) {
+    passwordProps[3] = symbols;
+  } else {
+    passwordProps[3] = emptyArr;
+  }
+
+  return passwordProps;
 }
 
-if (propCheck[1].checked === true) {
-  passwordProps[1] = letters;
-} else {
-  passwordProps[1] = emptyArr;
-}
-
-if (propCheck[2].checked === true) {
-  passwordProps[2] = capitals;
-} else {
-  passwordProps[2] = emptyArr;
-}
-
-if (propCheck[3].checked === true) {
-  passwordProps[3] = symbols;
-} else {
-  passwordProps[3] = emptyArr;
-}
-
-// Генерируем пароль с установленными параметрами:
+// Функция генерации пароля с установленными параметрами:
 function getPassword([arr1, arr2, arr3, arr4, passwordLength]) {
   // Объединяем и перемешиваем в один массив все досутпые символы:
   let mixedArr = arr1.concat(arr2, arr3, arr4).sort(function () {
@@ -109,7 +117,7 @@ function getPassword([arr1, arr2, arr3, arr4, passwordLength]) {
   // Обрезаем до установленной длины:
   mixedArr.splice(passwordLength);
 
-  // Проверки на наличие в массиве хотя бы одного элемента, каждого массива:
+  // Проверка сгенерированного пароля на содержание необходимых типов символов:
   if (arr1 === numbers) {
     findNumbers = mixedArr.some((r) => numbers.includes(r));
   }
@@ -135,6 +143,7 @@ function getPassword([arr1, arr2, arr3, arr4, passwordLength]) {
 
 button.addEventListener('click', (event) => {
   event.preventDefault();
+  getProperties(propCheck, passwordProps);
   getPassword(passwordProps);
-showPassword.value = password;
+  showPassword.value = password;
 });
