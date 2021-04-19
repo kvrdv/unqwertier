@@ -1,21 +1,21 @@
 @font-face {
   font-family: 'Inter-Regular';
-  src: url('./src/fonts/Inter/static/Inter-Regular.ttf') format('opentype');
+  src: url('../src/fonts/Inter/static/Inter-Regular.ttf') format('opentype');
 }
 
 @font-face {
   font-family: 'Inter-ExtraLight';
-  src: url('./src/fonts/Inter/static/Inter-ExtraLight.ttf') format('opentype');
+  src: url('../src/fonts/Inter/static/Inter-ExtraLight.ttf') format('opentype');
 }
 
 @font-face {
   font-family: 'Inter-Light';
-  src: url('./src/fonts/Inter/static/Inter-Light.ttf') format('opentype');
+  src: url('../src/fonts/Inter/static/Inter-Light.ttf') format('opentype');
 }
 
 @font-face {
   font-family: 'Inter-SemiBold';
-  src: url('./src/fonts/Inter/static/Inter-SemiBold.ttf') format('opentype');
+  src: url('../src/fonts/Inter/static/Inter-SemiBold.ttf') format('opentype');
 }
 
 html {
@@ -251,7 +251,7 @@ input {
   display: none;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 500px) {
   .main-title {    
     font-size: 4rem;
     margin: 6rem 0 0 0;
