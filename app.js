@@ -1,4 +1,4 @@
-// Массивы символов из которых составляется пароль:
+// Массивы символов, из которых формируется пароль:
 const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 const letters = [
   'a',
@@ -62,6 +62,7 @@ const emptyArr = [];
 // Переменные содержащие информацию о параметрах пароля:
 const passwordProps = [numbers, letters, capitals, symbols, 12];
 const propCheck = document.querySelectorAll('.prop-check');
+let warning = document.querySelector('.property-name-length');
 
 // Переменные для проверки сгенерированного пароля на содержание необходимых типов символов:
 let findNumbers = true;
@@ -69,17 +70,31 @@ let findLetters = true;
 let findCapitals = true;
 let findSymbols = true;
 
-// Вывод пароля:
-let showPassword = document.querySelector('.show-password');
-
 // Кнопка генерации пароля:
 const button = document.querySelector('.button');
 
-// Функция генерации массива с параметрами пароля:
-function getProperties(propCheck, passwordProps) {
-  // Получаем длину пароля:
-  passwordProps[4] = document.querySelector('.prop-length').value;
+// Вывод пароля:
+let showPassword = document.querySelector('.show-password');
 
+function getLength(passwordProps) {
+  // Получаем длину пароля:
+  let length = document.querySelector('.prop-length');  
+
+  if (length.value < 4) {
+    warning.innerText = 'min 4';
+    length.value = 4;
+    return (passwordProps[4] = 4);
+  } else if (length.value > 16) {
+    warning.innerText = 'max 16';
+    length.value = 16;
+    return (passwordProps[4] = 16);
+  } else {
+    return (passwordProps[4] = length.value);
+  }
+}
+
+// Функция генерации массива с параметрами пароля:
+function getProps(propCheck, passwordProps) {
   // Получаем параметры в соответствии с выставленными чекбоксами:
   if (propCheck[0].checked === true) {
     passwordProps[0] = numbers;
@@ -109,7 +124,7 @@ function getProperties(propCheck, passwordProps) {
 }
 
 // Функция генерации пароля с установленными параметрами:
-function getPassword([arr1, arr2, arr3, arr4, passwordLength]) {
+function getPass([arr1, arr2, arr3, arr4, passwordLength]) {
   // Объединяем и перемешиваем в один массив все досутпые символы:
   let mixedArr = arr1.concat(arr2, arr3, arr4).sort(function () {
     return Math.random() - 0.5;
@@ -135,7 +150,7 @@ function getPassword([arr1, arr2, arr3, arr4, passwordLength]) {
   }
 
   if (findNumbers === false || findLetters === false || findCapitals === false || findSymbols === false) {
-    getPassword(passwordProps);
+    getPass(passwordProps);
   } else {
     return (password = mixedArr.join(''));
   }
@@ -143,7 +158,9 @@ function getPassword([arr1, arr2, arr3, arr4, passwordLength]) {
 
 button.addEventListener('click', (event) => {
   event.preventDefault();
-  getProperties(propCheck, passwordProps);
-  getPassword(passwordProps);
+  warning.innerText = 'length';
+  getLength(passwordProps);
+  getProps(propCheck, passwordProps);
+  getPass(passwordProps);
   showPassword.value = password;
 });
