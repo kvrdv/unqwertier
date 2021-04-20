@@ -51,6 +51,14 @@ body {
   background-color: #eceff1;
 }
 
+input[type="text"]{
+    -moz-user-select: -moz-none;
+    -o-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
 /* Стилизация чекбоксов отсюда - https://habr.com/ru/post/489476/ */
 
 input[type='checkbox']:checked,
@@ -144,42 +152,55 @@ input {
   align-items: center;
 }
 
-.password {  
+.password {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 3rem 0 1rem 0;
+  margin: 3rem 0 1.5rem 0;
 }
 
 .show-password {
   min-width: 85vw;
-  height: 42px;
+  max-width: 100vw;
+  height: 4rem;
   padding: 0;
   border: none;
-  border-radius: 15px;
+  border-radius: 19px;
   font-family: Inter-Regular;
-  font-size: 1.5rem;
+  font-size: 1.9rem;
   text-align: center;
   color: #969899;
   opacity: 0.5;
   text-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
 }
 
-.button {  
+.show-password-warning {
+  position: absolute;
+  z-index: 1;
+  font-family: Inter-Regular;
+  font-size: 0.85rem;
+  color: #969899;
+  opacity: 0.5;
+  text-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 0 0 0 0;
+}
+
+.button {
   padding: 0;
-  margin: 1rem 0 0 0;
+  margin: 1.5rem 0 0 0;
   border: none;
-  width: 42px;
-  height: 42px;
+  width: 4rem;
+  height: 4rem;
   background: rgba(150, 152, 153, 0.5);
   box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
+  border-radius: 19px;
   cursor: pointer;
 }
 
 .button-image {
-  width: 20px;
+  width: 24px;
 }
 
 .properties {
@@ -210,6 +231,11 @@ input {
   font-size: 28px;
   text-align: center;
   color: #ffffff;
+  -moz-appearance: textfield;
+}
+
+.prop-length::-webkit-inner-spin-button {
+  display: none;
 }
 
 .property-name-length {
@@ -252,13 +278,13 @@ input {
 }
 
 @media (min-width: 500px) {
-  .main-title {    
+  .main-title {
     font-size: 4rem;
     margin: 6rem 0 0 0;
   }
 
-  .main-title-text {    
-    font-size: 1rem;    
+  .main-title-text {
+    font-size: 1rem;
   }
 
   .password {
@@ -268,16 +294,16 @@ input {
 
   .show-password {
     width: 50vw;
-    border-radius: 29px;    
+    border-radius: 29px;
     font-size: 64px;
   }
 
   .button {
     position: relative;
-    z-index: 1;    
-    margin: 0 0 0 -84px;    
+    z-index: 1;
+    margin: 0 0 0 -84px;
     width: 84px;
-    height: 84px;    
+    height: 84px;
     border-radius: 29px;
   }
 
@@ -290,9 +316,9 @@ input {
     border-radius: 21px;
     padding: 16px 16px 24px 16px;
     margin: 0 0 96px 0;
-  } 
+  }
 
   .footer-text {
-  right: 64px;
-}
+    right: 64px;
+  }
 }

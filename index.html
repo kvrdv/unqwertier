@@ -17,7 +17,8 @@
 
     <div class="main-content">
       <div class="password">
-        <input class="show-password" type="text" size="4" />
+        <input class="show-password" type="text" size="4" readonly />
+        <p class="hidden show-password-warning"></p>
         <form>
           <button class="button">
             <img class="button-image" src="./src/images/lock.svg" />
@@ -27,13 +28,13 @@
 
       <div class="properties">
         <div class="property-length">
-          <input class="prop-length" id="prp1" type="text" min="4" max="15" maxlength="2" />
+          <input class="prop-length" id="prp1" type="number" min="4" max="15" maxlength="2" value="4" />
           <label for="prp1"></label>
           <p class="property-name-length">length</p>
         </div>
 
         <div class="property">
-          <input class="prop-check" type="checkbox" id="prp2" />
+          <input class="prop-check" type="checkbox" id="prp2" checked />
           <label for="prp2"></label>
           <p class="property-name">numbers</p>
         </div>

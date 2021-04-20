@@ -60,7 +60,7 @@ const symbols = ['!', '@', '#', '$', '%', '&', '?', '-', '+', '=', '~'];
 const emptyArr = [];
 
 // Переменные содержащие информацию о параметрах пароля:
-const passwordProps = [numbers, letters, capitals, symbols, 12];
+const passwordProps = [emptyArr, emptyArr, emptyArr, emptyArr, 8];
 const propCheck = document.querySelectorAll('.prop-check');
 let warning = document.querySelector('.property-name-length');
 
@@ -72,13 +72,14 @@ let findSymbols = true;
 
 // Кнопка генерации пароля:
 const button = document.querySelector('.button');
+const copyWarning = document.querySelector('.show-password-warning');
 
 // Вывод пароля:
 let showPassword = document.querySelector('.show-password');
 
 function getLength(passwordProps) {
   // Получаем длину пароля:
-  let length = document.querySelector('.prop-length');  
+  let length = document.querySelector('.prop-length');
 
   if (length.value < 4) {
     warning.innerText = 'min 4';
@@ -163,4 +164,18 @@ button.addEventListener('click', (event) => {
   getProps(propCheck, passwordProps);
   getPass(passwordProps);
   showPassword.value = password;
+  if (showPassword.value === '') {
+    copyWarning.innerHTML = 'select at least one property';
+    copyWarning.classList.remove('hidden');
+    setTimeout(function () {
+      copyWarning.classList.add('hidden');
+    }, 1200);
+  } else {
+    navigator.clipboard.writeText(password);
+    copyWarning.innerHTML = 'copied to clipboard';
+    copyWarning.classList.remove('hidden');
+    setTimeout(function () {
+      copyWarning.classList.add('hidden');
+    }, 1200);
+  }
 });
