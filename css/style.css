@@ -51,12 +51,12 @@ body {
   background-color: #eceff1;
 }
 
-input[type="text"]{
-    -moz-user-select: -moz-none;
-    -o-user-select: none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    user-select: none;
+input[type='text'] {
+  -moz-user-select: -moz-none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 /* Стилизация чекбоксов отсюда - https://habr.com/ru/post/489476/ */
@@ -275,7 +275,7 @@ input {
   display: none;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 768px) {
   .main-title {
     font-size: 4rem;
     margin: 6rem 0 0 0;
@@ -285,23 +285,30 @@ input {
     font-size: 1rem;
   }
 
-  .password {
-    display: flex;
-    margin: 8rem 0 4rem 0;
+  .password {    
+    margin: 6rem 0 0 0;
   }
 
   .show-password {
-    width: 50vw;
+    min-width: 50vw;
     border-radius: 29px;
     font-size: 64px;
+    height: 5rem;
+  }
+
+  .show-password-warning {
+    position: absolute;
+    z-index: 1;
+    margin: -2rem 0 0 0;
+    font-size: 1rem;
   }
 
   .button {
     position: relative;
     z-index: 1;
-    margin: 0 0 0 -84px;
-    width: 84px;
-    height: 84px;
+    margin: 2rem 0 2rem 0;
+    width: 5rem;
+    height: 5rem;
     border-radius: 29px;
   }
 
