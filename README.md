@@ -1,4 +1,4 @@
-### Unqwertier
+## Unqwertier
 Simple password generator. 
 ***
 #### Parameters available for customisation: 
