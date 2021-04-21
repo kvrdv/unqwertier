@@ -11,8 +11,8 @@ Simple password generator.
 After being generated, password automaticaly copied to the clipboard.   
 Logic is written on JavaScript.   
 UX/UI designed by me. 
-
-### Design kit:
+***
+#### Design kit:
 ![Design kit](./src/images/design-kit.png)
-
+***
 [UNQWERTY!](https://kvrdv.github.io/unqwertier/)
