@@ -1,5 +1,5 @@
 ### Unqwertier
-A simple password generator. 
+Simple password generator. 
 ***
 #### Parameters available for customisation: 
 * length (from 4 to 16) 
@@ -8,8 +8,8 @@ A simple password generator.
 * capitals
 * symbols
 ***
-After being generated, password automaticaly copied to the clipboard. 
-Logic is written on JavaScript. 
-UX/UI designed by me.
+After being generated, password automaticaly copied to the clipboard.   
+Logic is written on JavaScript.   
+UX/UI designed by me.  
 
 [UNQWERTY!](https://kvrdv.github.io/unqwertier/)
