@@ -28,7 +28,7 @@ UX/UI designed by me.
 
 #### Font:
 
-[Google Fonts - Raleway](https://fonts.google.com/specimen/Inter 'Google Fonts - Inter')
+[Google Fonts - Inter](https://fonts.google.com/specimen/Inter 'Google Fonts - Inter')
 
 ---
 
