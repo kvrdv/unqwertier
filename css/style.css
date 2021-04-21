@@ -275,6 +275,12 @@ input {
   display: none;
 }
 
+@media (max-width: 374px) {
+  .show-password {
+    font-size: 1.5rem;
+  }
+}
+
 @media (min-width: 768px) {
   .main-title {
     font-size: 4rem;
@@ -285,12 +291,14 @@ input {
     font-size: 1rem;
   }
 
-  .password {    
+  .password {
     margin: 6rem 0 0 0;
+    width: 700px;
   }
 
   .show-password {
-    min-width: 50vw;
+    min-width: 700px;
+    max-width: 700px;
     border-radius: 29px;
     font-size: 64px;
     height: 5rem;
