@@ -15,7 +15,7 @@ UX/UI designed by me.
 #### Design kit:
 ![Design kit](./src/images/design-kit.png)
 ***
-### Font:
+#### Font:
 [Google Fonts - Raleway](https://fonts.google.com/specimen/Inter "Google Fonts - Inter")
 ***
 [UNQWERTY!](https://kvrdv.github.io/unqwertier/)
