@@ -16,7 +16,7 @@ UX/UI designed by me.
 
 #### Design kit:
 
-![Design kit](./src/images/design-kit.png)
+![Design kit](./src/images/design.png)
 
 #### Font:
 
