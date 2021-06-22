@@ -1,21 +1,23 @@
+@import '~normalize.css';
+
 @font-face {
   font-family: 'Inter-Regular';
-  src: url('../src/fonts/Inter/static/Inter-Regular.ttf') format('opentype');
+  src: url('/src/fonts/Inter/static/Inter-Regular.ttf') format('opentype');
 }
 
 @font-face {
   font-family: 'Inter-ExtraLight';
-  src: url('../src/fonts/Inter/static/Inter-ExtraLight.ttf') format('opentype');
+  src: url('/src/fonts/Inter/static/Inter-ExtraLight.ttf') format('opentype');
 }
 
 @font-face {
   font-family: 'Inter-Light';
-  src: url('../src/fonts/Inter/static/Inter-Light.ttf') format('opentype');
+  src: url('/src/fonts/Inter/static/Inter-Light.ttf') format('opentype');
 }
 
 @font-face {
   font-family: 'Inter-SemiBold';
-  src: url('../src/fonts/Inter/static/Inter-SemiBold.ttf') format('opentype');
+  src: url('/src/fonts/Inter/static/Inter-SemiBold.ttf') format('opentype');
 }
 
 html {

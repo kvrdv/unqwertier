@@ -1,3 +1,5 @@
+import './styles/styles.css';
+
 // Массивы символов, из которых формируется пароль:
 const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 const letters = [
@@ -75,6 +77,7 @@ const button = document.querySelector('.button');
 const copyWarning = document.querySelector('.show-password-warning');
 
 // Вывод пароля:
+let password;
 let showPassword = document.querySelector('.show-password');
 
 function getLength(passwordProps) {
@@ -152,7 +155,7 @@ function getPass([arr1, arr2, arr3, arr4, passwordLength]) {
 
   if (findNumbers === false || findLetters === false || findCapitals === false || findSymbols === false) {
     getPass(passwordProps);
-  } else {
+  } else {    
     return (password = mixedArr.join(''));
   }
 }
