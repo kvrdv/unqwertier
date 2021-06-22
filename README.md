@@ -29,7 +29,3 @@ UX/UI designed by me.
 #### Font:
 
 [Google Fonts - Inter](https://fonts.google.com/specimen/Inter 'Google Fonts - Inter')
-
----
-
-[UNQWERTY!](https://kvrdv.github.io/unqwertier/)
