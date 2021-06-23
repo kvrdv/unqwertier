@@ -1,10 +1,10 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/7qdaxyvsmsbiah9u?svg=true)](https://ci.appveyor.com/project/kvrdv/unqwertier)
 
+[App page](https://bencubin.github.io/unqwertier/ 'Unqwerty!')
+
 ## Unqwertier
 
 Simple password generator
-
-[App page](https://bencubin.github.io/unqwertier/ 'Unqwerty!')
 
 #### Parameters available for customisation:
 
