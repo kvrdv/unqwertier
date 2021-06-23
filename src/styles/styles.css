@@ -199,10 +199,6 @@ input {
   cursor: pointer;
 }
 
-.button-image {
-  width: 24px;
-}
-
 .properties {
   background-color: #ffffff;
   border-radius: 21px;
