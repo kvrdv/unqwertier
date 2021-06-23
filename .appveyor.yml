@@ -1,22 +1,22 @@
-image: Ubuntu1804  # образ для сборки
+image: Ubuntu1804
 
-stack: node 12  # окружение
+stack: node 12
 
 branches:
   only:
-    - master  # ветка git
+    - master
   except:
       - gh-pages
 
-cache: node_modules  # кеширование
+cache: node_modules
 
 install:
-  - npm install  # команда установки зависимостей
+  - npm install
 
-build: off  # отключаем встроенную в appveyor систему сборки
+build: off
 
 build_script:
-  - npm run build   # команда сборки
+  - npm run build
 
 deploy_script:
   - git config --global credential.helper store

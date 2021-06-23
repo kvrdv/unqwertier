@@ -75,7 +75,7 @@ module.exports = {
       },
       {
         test: /\.(png|svg|ttf)$/,
-        type: 'asset/resource',
+        type: 'asset/inline',
       },
       {
         test: /\.m?js$/,
@@ -87,16 +87,6 @@ module.exports = {
           },
         },
       },
-      {
-        test: /\.ts$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env', '@babel/preset-typescript'],
-          },
-        },
-      },      
     ],
   },
 };
