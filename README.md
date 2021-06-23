@@ -1,4 +1,4 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/7qdaxyvsmsbiah9u?svg=true)](https://ci.appveyor.com/project/kvrdv/unqwertier)
+[![Build status](https://ci.appveyor.com/api/projects/status/h45n8sqjaa23b9ef?svg=true)](https://ci.appveyor.com/project/bencubin/unqwertier)
 
 [App page](https://bencubin.github.io/unqwertier/ 'Unqwerty!')
 
