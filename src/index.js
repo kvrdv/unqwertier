@@ -155,7 +155,7 @@ function getPass([arr1, arr2, arr3, arr4, passwordLength]) {
 
   if (findNumbers === false || findLetters === false || findCapitals === false || findSymbols === false) {
     getPass(passwordProps);
-  } else {    
+  } else {
     return (password = mixedArr.join(''));
   }
 }
