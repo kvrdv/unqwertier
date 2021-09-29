@@ -1,6 +1,6 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/uy3o5cy0gk011onr?svg=true)](https://ci.appveyor.com/project/bencubin/unqwertier)
 
-[Visit page](https://kvrdv.github.io/unqwertier / 'Unqwerty!')
+[Visit page](https://kvrdv.github.io/unqwertier/ 'Unqwerty!')
 
 ## Unqwertier
 
