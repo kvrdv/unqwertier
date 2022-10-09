@@ -1,6 +1,5 @@
 import './styles/styles.css';
 
-// Массивы символов, из которых формируется пароль:
 const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 const letters = [
   'a',
@@ -61,27 +60,22 @@ const capitals = [
 const symbols = ['!', '@', '#', '$', '%', '&', '?', '-', '+', '=', '~'];
 const emptyArr = [];
 
-// Переменные содержащие информацию о параметрах пароля:
 const passwordProps = [emptyArr, emptyArr, emptyArr, emptyArr, 8];
 const propCheck = document.querySelectorAll('.prop-check');
 let warning = document.querySelector('.property-name-length');
 
-// Переменные для проверки сгенерированного пароля на содержание необходимых типов символов:
 let findNumbers = true;
 let findLetters = true;
 let findCapitals = true;
 let findSymbols = true;
 
-// Кнопка генерации пароля:
 const button = document.querySelector('.button');
 const copyWarning = document.querySelector('.show-password-warning');
 
-// Вывод пароля:
 let password;
 let showPassword = document.querySelector('.show-password');
 
 function getLength(passwordProps) {
-  // Получаем длину пароля:
   let length = document.querySelector('.prop-length');
 
   if (length.value < 4) {
@@ -97,9 +91,7 @@ function getLength(passwordProps) {
   }
 }
 
-// Функция генерации массива с параметрами пароля:
 function getProps(propCheck, passwordProps) {
-  // Получаем параметры в соответствии с выставленными чекбоксами:
   if (propCheck[0].checked === true) {
     passwordProps[0] = numbers;
   } else {
@@ -127,16 +119,12 @@ function getProps(propCheck, passwordProps) {
   return passwordProps;
 }
 
-// Функция генерации пароля с установленными параметрами:
 function getPass([arr1, arr2, arr3, arr4, passwordLength]) {
-  // Объединяем и перемешиваем в один массив все досутпые символы:
   let mixedArr = arr1.concat(arr2, arr3, arr4).sort(function () {
     return Math.random() - 0.5;
   });
-  // Обрезаем до установленной длины:
   mixedArr.splice(passwordLength);
 
-  // Проверка сгенерированного пароля на содержание необходимых типов символов:
   if (arr1 === numbers) {
     findNumbers = mixedArr.some((r) => numbers.includes(r));
   }
