@@ -1,5 +1,3 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/uy3o5cy0gk011onr?svg=true)](https://ci.appveyor.com/project/kvrdv/unqwertier)
-
 # Unqwertier - simple password generator
 
 ## Parameters available for customisation:
